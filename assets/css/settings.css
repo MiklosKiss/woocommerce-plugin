@@ -1,0 +1,79 @@
+.seon-settings-container{
+    width: 100%;
+    display: table;
+    text-align: center;
+    height: 100vh;
+    min-height: 100vh;
+}
+.seon-settings-container .seon-settings{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+}
+.seon-settings-container .seon-settings-content{
+    width: 800px;
+    padding:20px;
+    text-align: left;
+    border: 1px solid #ccc;
+    background: #fff;
+    display: inline-block;
+}
+.seon-settings-container .seon-settings-content form{
+    margin:0;
+}
+.seon-settings-container .seon-settings-content table .seon-title{
+    background: #1dbca9;
+    color: #fff;
+    padding: 20px 10px;
+}
+.seon-settings-container .seon-settings-content table td{
+    padding: 5px 0;
+}
+.seon-settings-container .seon-settings-submit{
+    background: #1dbca9;
+    display: block;
+    padding: 10px;
+    margin-top:40px;
+}
+.seon-settings-container .seon-settings-submit input{
+    background:#1aaa99;
+    color:#fff;
+    border:2px solid #23282D;
+    line-height:35px;
+    text-shadow:none;
+    box-shadow: none;
+    height:auto;
+    border-radius:0;
+    border:none;
+    -webkit-transition: 500ms ease-in-out;
+    -moz-transition: 500ms ease-in-out;
+    -o-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+}
+.seon-settings-container .seon-settings-submit input.cd-reset-default{
+    margin-left:10px;
+}
+.seon-settings-container .seon-settings-submit .button-primary.hover, .seon-settings-container .seon-settings-submit .button-primary:hover, .seon-settings-container .seon-settings-submit .button-primary.focus, .seon-settings-container .seon-settings-submit .button-primary:focus{
+    border: none;
+    box-shadow: none;
+    background:#189989;
+    color:#fff;
+}
+.seon-settings-container .seon-settings-heading{
+    padding-top: 10px;
+    font-size: 14px;
+}
+.seon-settings-container .seon-settings-content .regular-text{
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+}
+.seon-settings-container .seon-settings-content .regular-radio{
+    margin-right: 0;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+.seon-settings-container .seon-settings-content .regular-radio.first{
+    margin-left: 0;
+}
