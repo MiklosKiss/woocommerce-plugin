@@ -77,3 +77,18 @@
 .seon-settings-container .seon-settings-content .regular-radio.first{
     margin-left: 0;
 }
+td.order_seon_status span{
+    width: 10px;
+    height: 10px;    
+    border-radius: 99px;
+    display: inline-block;
+}
+td.order_seon_status span.approve{
+    background: #EDEDED;
+}
+td.order_seon_status span.decline{
+    background: #FB9294;
+}
+td.order_seon_status span.review{
+    background: #F3D576;
+}
