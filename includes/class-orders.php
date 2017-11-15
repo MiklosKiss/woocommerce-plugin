@@ -62,8 +62,8 @@ if (!class_exists('SEON_Orders')) {
             $seon_columns = (is_array($columns)) ? $columns : array();
             unset($seon_columns['order_actions']);
 
-            $seon_columns['order_seon_score'] = __('Seon Score', 'seon');
-            $seon_columns['order_seon_status'] = __('Seon Status', 'seon');
+            //$seon_columns['order_seon_score'] = __('Seon Score', 'seon');
+            $seon_columns['order_seon_status'] = __('Seon State', 'seon');
 
             $seon_columns['order_actions'] = $columns['order_actions'];
             return $seon_columns;
@@ -81,11 +81,11 @@ if (!class_exists('SEON_Orders')) {
             global $post;
             $data = get_post_meta($post->ID);
 
-            if ($column == 'order_seon_score') {
-                echo (isset($data['_order_seon_score']) ? $data['_order_seon_score'][0] : '');
-            }
-            if ($column == 'order_seon_status') {
-                echo (isset($data['_order_seon_status']) ? $data['_order_seon_status'][0] : '');
+            //if ($column == 'order_seon_score') {
+                //echo (isset($data['_order_seon_score']) ? $data['_order_seon_score'][0] : '');
+            //}
+            if ($column == 'order_seon_status') {             
+                echo (isset($data['_order_seon_status']) ? '<span class="' . strtolower($data['_order_seon_status'][0]) . '"></span> ' . $data['_order_seon_status'][0] : '');
             }
         }
 
@@ -99,7 +99,7 @@ if (!class_exists('SEON_Orders')) {
          */
         public function seon_shop_order_sorting($columns) {
             $custom = array(
-                'order_seon_score' => '_order_seon_score',
+                //'order_seon_score' => '_order_seon_score',
                 'order_seon_status' => '_order_seon_status'
             );
             return wp_parse_args($custom, $columns);
@@ -144,8 +144,8 @@ if (!class_exists('SEON_Orders')) {
         public function custom_shop_order_detailes($order) {
             $html = '<div class="order_data_column">';
             $html .= '<h4>' . __('SEON', 'seon') . '</h4>';
-            $html .= '<p>' . __('Score', 'seon') . ':<br><strong>' . get_post_meta($order->id, '_order_seon_score', true) . '</strong></p>';
-            $html .= '<p>' . __('Status', 'seon') . ':<br><strong>' . get_post_meta($order->id, '_order_seon_status', true) . '</strong></p>';
+            //$html .= '<p>' . __('Score', 'seon') . ':<br><strong>' . get_post_meta($order->id, '_order_seon_score', true) . '</strong></p>';
+            $html .= '<p>' . __('State', 'seon') . ':<br><strong>' . get_post_meta($order->id, '_order_seon_status', true) . '</strong></p>';
             $html .= '</div>';
 
             echo $html;
